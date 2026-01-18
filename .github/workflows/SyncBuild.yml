@@ -1,5 +1,4 @@
-name: NodeJS with Webpack
-
+name: NodeJS build verification
 on:
   push:
     branches: [ "master" ]
@@ -12,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [18.x, 20.x, 22.x]
 
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +27,3 @@ jobs:
 
 #      - name: Run tests
 #        run: npm test   # <— works for Jest, Vitest, Mocha, etc.
-
-      - name: Build with Webpack
-        run: npx webpack
