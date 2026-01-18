@@ -1,4 +1,10 @@
 
-.env/
+#Environment secrets
+.env
+
+# DB Config settings
+dbconf.cfg
+
+# Node modules
 node_modules/
 
