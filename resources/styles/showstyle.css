@@ -58,10 +58,13 @@ body {
     flex-direction: row;
     font-size: 18px;
     color: #435669;
+    background-color: burlywood;
     width: 80%;
     margin: 10px 0;
     border: 4.5px groove #555;
     border-top: 0;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
 }
 
 #imgblock {
@@ -74,6 +77,17 @@ body {
     justify-content: center;
     align-items: center;
     display: inline-flex;
+}
+
+#imgblock img {
+    display: block;
+    width: auto;
+    height: 260px;
+    border: 2px solid gray;
+}
+
+#imgblock figcaption {
+    background-color: #2028316e;
 }
 
 #detailsblock {
@@ -240,7 +254,7 @@ body {
 
 #revwindow span {
     font-size: 14px;
-    transition: font-size 1s ease; 
+    transition: font-size 1s ease;
 }
 
 
