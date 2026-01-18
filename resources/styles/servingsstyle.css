@@ -1,0 +1,234 @@
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+.headinfo {
+    display: flex;  
+    position: fixed;
+    z-index: 1;
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: hsla(32, 86%, 81%, 0.7);
+    color: hsl(20, 94%, 28%);
+    height: 4rem;
+    width: 100%;
+}
+
+
+.title {
+    display: inline-flex;
+    float: left;
+    font-size: 1.5rem;
+    display: inline-flex;
+    letter-spacing: 5px;
+    /*    text-decoration: underline wavy black;*/
+}
+
+.title a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.title:active {
+    background-color: rgb(190, 86, 86);
+}
+
+h1 {
+    display: flex;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-self: center;
+}
+
+#dishBox,
+#sideBox {
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #a53030;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    list-style: none;
+}
+
+#dishBox h4,
+#sideBox h4 {
+    text-align: center;
+    color: #333;
+}
+
+#dishBox h2 {
+    text-align: center;
+    color: #333;
+}
+
+#dishdeetblock {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 80%;
+}
+
+#imgblock {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+#detailsblock {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #555;
+    width: 60%;
+}
+
+#dishdeetsbtn {
+    background-color: hsl(32, 86%, 81%);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.5s ease;
+    margin-top: 10px;
+    display: flex;
+    justify-self: flex-end;
+}
+
+#dishdeetsbtn:hover {
+    background-color: hsl(32, 86%, 70%);
+}
+
+/* this is a way to style the specific dishes section background */
+.dishback {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: burlywood;
+}
+
+.dishes {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 2rem 1rem;
+    height: 20rem;
+    width: 25rem;
+    /*border: 0.25rem dashed thistle;*/
+    border-radius: 1.7rem;
+    justify-self: flex-start;
+    background-color: hsl(20, 94%, 15%, 0.7);
+}
+
+.dishheading {
+    display: inline-flex;
+    position: relative;
+    color: hsl(20, 94%, 28%);
+    background-color: #b1bcc7;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+    margin: 0;
+    margin-bottom: 0;
+    font-family: 'Flamenco';
+    height: 2rem;
+}
+
+.dishdescription {
+    display: inline-flex;
+    position: relative;
+    color: hsl(20, 94%, 28%);
+    margin: 0;
+
+    flex-direction: column;
+    width: 100%;    
+    align-items: center;
+    align-content: center;
+    justify-items: 2center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    scroll-behavior: smooth;
+    scroll-margin-block: 1rem;
+}
+
+.dishimg {
+    display: flex;
+    position: relative;
+    background-color: hsla(34, 67%, 60%, 0.9);
+    height: fit-content;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.dishimg img {
+    display: block;
+    position: relative;
+    height: 10rem;
+    border-radius: 25%;
+    width: 16rem;
+    margin: 0.75rem;
+    border: 0.2rem groove hsla(22, 90%, 30%, 0.9);
+}
+
+.dishtext {
+    display: inline-flex;
+    position: relative;
+    background-color: hsl(11, 73%, 7%);
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: hsl(20, 94%, 38%);
+    height: fit-content;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dishtext ul {
+    display: inline-flex;
+    list-style: armenian;
+}
+
+/* custom website scrollbar*/
+
+::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 8rem;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: bisque;
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(hsl(20, 94%, 15%), rgb(196, 155, 101), hsl(20, 94%, 38%));
+    box-shadow: inset 0 0 5px indianred;
+    border-radius: 10px;
+}

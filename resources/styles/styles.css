@@ -1,0 +1,391 @@
+html {
+    margin: 0;
+    width: 100%;
+    font-family: 'Flamenco';
+    font-size: 20px;
+    color: hsla(10, 81%, 94%, 0.979);
+    height: fit-content;
+}
+
+.headinfo {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: hsla(32, 86%, 81%, 0.7);
+    color: hsl(20, 94%, 28%);
+    height: 4rem;
+    width: 100%;
+}
+
+
+.title {
+    display: inline-flex;
+    float: left;
+    font-size: 1.5rem;
+    display: inline-flex;
+    letter-spacing: 5px;
+    /*    text-decoration: underline wavy black;*/
+}
+
+.title a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.title:active {
+    background-color: rgb(190, 86, 86);
+}
+
+.navigation {
+    display: flex;
+}
+
+nav li {
+    display: inline-flex;
+    padding-right: 0.5rem;
+}
+
+nav a {
+    color: hsl(20, 94%, 28%);
+    transition: all .3s ease-out;
+}
+
+nav a:hover {
+    display: inline-flex;
+    padding-right: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(252, 231, 205);
+    background-color: hsla(20, 65%, 38%, 0.7);
+}
+
+body {
+    position: relative;
+    margin: 0;
+}
+
+.background {
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+    background-image: url("/resources/images/photo-1542320260-f8f651de8c12.avif");
+    background-position: bottom;
+    background-size: cover;
+    top: 4rem;
+    height: 30rem;
+    width: 100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: bisque;
+    font-family: 'Flamenco';
+}
+
+.background h2 {
+    display: inline-flex;
+    background-color: hsl(20, 94%, 15%, 0.5);
+    font-style: normal;
+    font-size: 2rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.background h2:hover {
+    display: inline-flex;
+    background-color: hsl(20, 94%, 15%, 0.5);
+    font-style: normal;
+    font-size: 3rem;
+    padding: 0.5rem;
+}
+
+/*consider gridding this siteintro section to have the different areas spread around*/
+.siteintro {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 0 auto;
+    top: 4rem;
+    height: fit-content;
+    width: 100%;
+    font-family: 'Flamenco';
+    background-color: hsl(20, 94%, 25%, 0.9);
+}
+
+.sitedescription {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+    height: fit-content;
+    font-style: oblique;
+    justify-content: center;
+    background-color: hsl(20, 94%, 15%, 0.5);
+}
+
+.sitedescription h4 {
+    display: inline-flex;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+}
+
+/*add classes for health/nutrition newsline reference, weather display web app?, highlighted customer review sections*/
+.intromagery {
+    display: flex;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.intromagery img {
+    display: block;
+    position: relative;
+    height: 8rem;
+    border-radius: 10%;
+    width: 10rem;
+    min-width: 5rem;
+    margin: 0.75rem;
+    border: 0.2rem groove hsla(22, 90%, 30%, 0.9);
+}
+
+.musica {
+    display: flex;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    background-color: hsl(20, 94%, 15%, 0.9);
+    justify-content: center;
+}
+
+video {
+    position: relative;
+    object-fit: fill;
+    overflow: clip;
+    mask-origin: fill-box;
+    align-self: center;
+}
+
+.maincontent {
+    display: flex;
+    position: relative;
+    background-color: papayawhip;
+    flex-direction: column;
+    margin: 0;
+    top: 4rem;
+    justify-content: flex-start;
+}
+
+.categorylabel {
+    display: flex;
+    margin: 0;
+    height: 3rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(20, 94%, 11%);
+}
+
+.categorylabel h2 {
+    display: inline-flex;
+    position: relative;
+    color: bisque;
+    text-transform: uppercase;
+    font-style: oblique;
+    letter-spacing: 0.1rem;
+    margin-left: 1.5rem;
+}
+
+/* this is a way to style the specific dishes section background */
+.dishback {
+    display: flex;
+    height: fit-content;
+    background-color: hsl(20, 94%, 15%, 0.9);
+}
+
+.dishes {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 2rem auto;
+    height: 18rem;
+    width: 25rem;
+    /*border: 0.25rem dashed thistle;*/
+    border-radius: 1.7rem;
+    justify-self: flex-start;
+    background-color: hsl(20, 94%, 25%, 0.9);
+}
+
+/*.dishcontainer {
+    display: flex;
+    position: relative;
+    background-color: aliceblue;
+    margin: 0 auto;
+    width: 100%;
+    height: 20rem;
+    z-index: 1;
+}*/
+
+.dishheading {
+    display: inline-flex;
+    position: relative;
+    color: hsl(20, 94%, 28%);
+    background-color: hsla(34, 67%, 60%, 0.9);
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+    margin: 0;
+    margin-bottom: 0;
+    font-family: 'Flamenco';
+    height: 4rem;
+}
+
+.dishdescription {
+    display: inline-flex;
+    position: relative;
+    color: hsl(20, 94%, 38%);
+    margin: 0;
+    font-size: 1rem;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-items: 2center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    scroll-behavior: smooth;
+    scroll-margin-block: 1rem;
+}
+
+.dishimg {
+    display: flex;
+    position: relative;
+    background-color: hsla(34, 67%, 60%, 0.9);
+    height: fit-content;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.dishimg img {
+    display: block;
+    position: relative;
+    height: 10rem;
+    border-radius: 25%;
+    width: 16rem;
+    margin: 0.75rem;
+    border: 0.2rem groove hsla(22, 90%, 30%, 0.9);
+}
+
+.dishtext {
+    display: inline-flex;
+    position: relative;
+    background-color: hsl(11, 73%, 7%);
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: hsl(20, 94%, 38%);
+    height: fit-content;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dishtext ul {
+    display: inline-flex;
+    list-style:upper-roman;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.sides {
+    display: flex;
+}
+.theend {
+    display: flex;
+    margin: 0;
+    background-color: hsl(20, 94%, 25%, 1);
+    color: brown;
+    background-image: url("../images/OutsideGlassView.avif");
+    height: 16rem;
+    background-size: cover;
+    background-position:center;
+    width: 100%;
+    justify-content: center;
+}
+
+.theend p {
+    display: inline-flex;
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Flamenco';
+    text-transform: uppercase;
+    align-items: last baseline;
+}
+
+footer {    
+    display: flex;
+    position: relative;
+    background-color: hsl(11, 73%, 7%);
+    color: hsl(20, 94%, 38%);
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5rem;
+    border-top: 0.15rem solid burlywood;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact p {
+    display: inline-flex;
+    position: relative;
+    margin: 0;
+    align-self: center;
+}
+
+/* custom website scrollbar*/
+
+::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 2rem;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background: bisque;
+}
+
+::-webkit-scrollbar-thumb {
+    background: -webkit-linear-gradient(hsl(20, 94%, 15%), rgb(196, 155, 101), hsl(20, 94%, 38%));
+    box-shadow: inset 0 0 5px indianred;
+    border-radius: 10px;
+}
+
+/*video   {
+    display: block;
+    position: relative;
+}*/

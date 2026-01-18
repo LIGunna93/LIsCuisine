@@ -1,0 +1,346 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#dishdeetblock {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+#headblock {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    background-color: #b1bcc7;
+    text-align: center;
+    width: 100%;
+}
+
+#actionbtns {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+#actionbtns button {
+    background-color: hsl(32, 86%, 81%);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#actionbtns button:hover {
+    background-color: hsl(32, 86%, 70%);
+}
+
+#actionbtns:child {
+    display: inline-flex;
+    height: fit-content;
+}
+
+#detailsection {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    color: #435669;
+    width: 80%;
+    margin: 10px 0;
+    border: 4.5px groove #555;
+    border-top: 0;
+}
+
+#imgblock {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    width: 40%;
+    height: 300px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+#detailsblock {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: #555;
+    width: 60%;
+    margin: 5px;
+    border: 3px solid #555;
+}
+
+#ingwindow {
+    display: inline-flex;
+    flex-direction: row;
+    color: rgb(82, 82, 13);
+}
+
+#ings {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.addinfo {
+    display: flex;
+    flex-direction: column;
+}
+
+#insBox {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#insdisplay {
+    display: flex;
+    color: bisque;
+    background-color: #555;
+}
+
+#inswindow {
+    display: flex;
+    background-color: bisque;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    border: 1px dashed grey;
+    margin: 5px 10px;
+    justify-content: space-around;
+    width: 800px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#ins:hover {
+    text-transform: uppercase;
+    font-size: larger;
+    color: darkslategrey;
+}
+
+#ins {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0px 3px 0px 0px#555;
+    align-content: space-between;
+    border: 2px groove gainsboro;
+}
+
+#nutriBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#nutridisplay {
+    display: flex;
+    margin: 0;
+    color: bisque;
+    background-color: #555;
+}
+
+#nutriwindow {
+    display: flex;
+    background-color: bisque;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    border: 5px groove grey;
+    margin: 0;
+    width: 200px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#nutriwindow li {
+    display: inline-flex;
+    flex-direction: row;
+    box-shadow: 0px 3px 0px 0px#555;
+    align-content: space-between;
+    transition: ("text-transform", "font-size") 1s;
+}
+
+#nutriwindow li:hover {
+    text-transform: uppercase;
+    font-size: larger;
+    color: darkslategrey;
+}
+
+#nutriwindow li:last-child {
+    display: inline-flex;
+    flex-direction: row;
+    box-shadow: 0;
+    align-content: space-between;
+}
+
+
+#reviewBox {
+    display: flex;
+    flex-direction: column;
+}
+
+#revdisplay {
+    display: flex;
+    color: bisque;
+    background-color: #555;
+}
+
+#revhead {
+    display: flex;
+    flex-direction: column;
+}
+
+#revwindow {
+    display: flex;
+    background-color: bisque;
+    transition: font-size 1s ease;
+    opacity: 1;
+    border: 5px groove bisque;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    padding-left: 4rem;
+    flex-wrap: wrap;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 6%;
+    margin-bottom: 20px;
+    width: auto;
+    font-size: 15px;
+}
+
+#revwindow li {
+    display: inline-flex;
+    color: darkslategrey;
+    padding: 10px 10px;
+    flex-direction: column;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 0px 0px #555;
+    border-radius: 15%;
+    font-weight: 700;
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+#revwindow span {
+    font-size: 14px;
+    transition: font-size 1s ease; 
+}
+
+
+#revwindow span:hover {
+    text-transform: capitalize;
+    text-decoration: underline;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: bisque;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+form input,
+textarea {
+    border-radius: 10%;
+    align-content: center;
+}
+
+form h3 {
+    text-decoration: underline;
+    align-self: center;
+}
+
+#instructform div {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 15px;
+
+}
+
+#instructform textarea {
+    width: 300px;
+    height: 100px;
+    border: 2px groove hsl(0, 0%, 80%);
+}
+
+#nutriform {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#revform {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 20px auto;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#revrate {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+#revrate:any-link {
+    display: inline-flex;
+}
+
+#revbody {
+    display: flex;
+    flex-direction: column;
+}
+
+.addinfo img {
+    display: block;
+    width: 16rem;
+    height: 12rem;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    background-color: hsl(11, 73%, 7%);
+    color: hsl(20, 94%, 38%);
+    margin: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5rem;
+    border-top: 0.15rem solid burlywood;
+}

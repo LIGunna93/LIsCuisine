@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" style="display: flex; width: 100%; margin: 0; justify-content: center;">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dishes</title>
+  <link rel="stylesheet" href="/resources/styles/servingsstyle.css">
+</head>
+<header class="headinfo">
+  <div class="title">
+    <h2><a href="/">Cook'd by LI</a></h2>
+  </div>
+</header>
+
+<body style="display: flex;  flex-direction: column; align-content: center;">
+  <h1>Dishes</h1>
+  <div
+    style="display: flex; align-items: center; float: left; flex-direction: column; border: 2px groove goldenrod; padding: 10px; margin: 10px;">
+    <ul class="dishback">
+      <% for (let dish of dishes) { %>
+        <li class="dishes">
+          <h4 class="dishheading">
+            <%= dish.name %> || €<%= dish.price %>
+          </h4>
+          <p id="dishDesc">
+            <%= dish.description %>
+          </p>
+          <p id="dishDesc">
+            <%= dish.category %>
+          </p>
+          <button id="dishdeetsbtn"><a href="/dishes/<%= dish._id %>">More details ---</a></button>
+          <% } %>
+        </li>
+    </ul>
+
+    <div>
+      <button <a href="/dishes/new">Add new Dish</a></button>
+    </div>
+  </div>
+  <script src="../../resources/scripts/dishes.js"></script>
+</body>
+<footer>
+  <p>Copyright LI Corp 2025</p>
+  <div class="contact">
+    <p>Email | lungista@hotmail.com </p>
+    <p>Mobile | +491788728575</p>
+    <p>Blog |</p>
+  </div>
+</footer>
+
+</html>

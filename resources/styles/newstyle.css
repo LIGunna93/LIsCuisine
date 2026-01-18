@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(194, 175, 126);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 2px solid hsl(32, 86%, 81%);
+}

@@ -1,0 +1,27 @@
+{
+    "Dish": {
+        "Patata Stir-Fry": {
+            "imgsrc": "../resources/images/Wedge-Havana.jpg",
+            "imgref": "https://unsplash.com/@marcuswinkler",
+            "imgauth": "Marcus Winkler"
+        },
+        "Caesar-Salad": {
+            "imgsrc": "../resources/images/Caesar-Salad.jpg",
+            "imgref": "https://unsplash.com/@marcuswinkler",
+            "imgauth": "Marcus Winkler"
+        }
+    },
+    "Side": {
+        "Wedge-Havana": {
+            "imgsrc": "Wedge-Havana.jpg",
+            "imgref": "https://unsplash.com/@marcuswinkler",
+            "imgauth": "Marcus Winkler"
+        },
+        "Caesar-Salad": {
+            "imgsrc": "../resources/images/Caesar-Salad.jpg",
+            "imgref": "https://unsplash.com/@marcuswinkler",
+            "imgauth": "Marcus Winkler"
+        }
+    },
+    "Dessert": {}
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= dish.name %>
+    </title>
+    <link rel="stylesheet" href="/resources/styles/showstyle.css">
+</head>
+
+<body style="background-color: burlywood;">
+    <div>
+        <% if((msgs.success || msgs.successedt) && (msgs.success || msgs.successedt).length) { %>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <p>
+                    <%= msgs.success || msgs.successedt %>
+                </p>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+            <% } %>
+
+                <% if((msgs.error || msgs.erroredt) && (msgs.error || msgs.erroredt).length) { %>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <p>
+                            <%= msgs.error || msgs.erroredt %>
+                        </p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <% } %>
+                    </div>
+    </div>
+    <figure id="dishdeetblock">
+        <div id="headblock">
+            <h2>
+                <%= dish.name %> - €<%= dish.price %>
+            </h2>
+            <div id="actionbtns">
+                <button><a href="/dishes/<%=dish._id%>/edit">Edit</a></button>
+            </div>
+        </div>
+        <section id="detailsection">
+            <div id="imgblock">
+                <figure style="display: flex; flex-direction: column;">
+                    <img src="<%= dish.imgsrc %>" alt="<%= dish.name %>"
+                        style="display: inline-block; width:300px; height:300px;">
+                    <figcaption>Photo by : <span style="font-weight: 600;">
+                            <%= dish.imgauth %>
+                        </span></figcaption>
+                </figure>
+
+            </div>
+            <div class="detailsblock">
+                <p>Category : <%= dish.category %>
+                </p>
+                <p>Prep Time: <%= dish.prepTime %> minutes || Difficulty : <%= dish.difficulty %>
+                </p>
+                <p>Description : <%= dish.description %>
+                </p>
+                <p>
+                    Ingredients :
+                <ul id="ingwindow">
+                    <% for(let ing of dish.ingredients){ %>
+                        <li id="ings">
+                            <%=ing%>
+                        </li>
+                        <% } %>
+                </ul>
+
+                </p>
+
+            </div>
+        </section>
+        <section class="addinfo">
+            <div id="insBox">
+                <button id="insdisplay">
+                    <h3>Cooking Instructions</h3>
+                </button>
+                <ul id="inswindow">
+                    <% for(let instruct of dish.instructions){ %>
+                        <li id="ins">
+                                <img src="<%=instruct.visualsrc%>" alt="">
+                                <p># <%=instruct.instruct%>
+                                </p>
+                        </li>
+                        <%}%>
+                </ul>
+
+            </div>
+            <div id="nutriBox">
+                <button id="nutridisplay">
+                    <h3>Nutritional Info</h3>
+                </button>
+                <ul id="nutriwindow">
+                    <% for(let nutrition of dish.nutritionals){ %>
+                        <li>
+                            <p>
+                                <%=nutrition.nutri_prop%> || <%=nutrition.nutri_value%>--
+                                        <%=nutrition.unit%>
+                            </p>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+            <div id="reviewBox">
+                <button id="revdisplay">
+                    <h3>Reviews --</h3>
+                </button>
+                <ul id="revwindow">
+                    <% for(let review of dish.reviews){ %>
+                        <li>
+                            <div id="revHead">
+                                <p style="display: inline-flex;">
+                                    User --
+                                    <!--section for req.User/loggedin simulation projection for either a "Guest" or registered/loggedin "Username"
+                                    <div style="display: inline-flex;">
+                                    <% if((msgs.success || msgs.successedt) && (msgs.success || msgs.successedt).length)
+                                        { %>
+                                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                            <p>
+                                                <%= msgs.success || msgs.successedt %>
+                                            </p>
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                                        </div>
+                                        <% } %>
+
+                                            <% if((msgs.error || msgs.erroredt) && (msgs.error || msgs.erroredt).length)
+                                                { %>
+                                                <div class="alert alert-danger alert-dismissible fade show"
+                                                    role="alert">
+                                                    <p>
+                                                        <%= msgs.error || msgs.erroredt %>
+                                                    </p>
+                                                    <button type="button" class="btn-close"
+                                                        data-bs-dismiss="alert"></button>
+                                                </div>
+                                                <% } %>
+                                </div>-->
+                                </p>
+                                <p style="display: inline-flex;">Rating -- <%=review.rating%>
+                                </p>
+
+                            </div>
+                            <p>
+                                Review -- <span>
+                                    <%=review.body%>
+
+                            </p></span>
+                            <P>Posted on <%=review.published.toLocaleString()%>
+                            </P>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+        </section>
+    </figure>
+
+    <form action="/dishes/<%= dish._id %>/instructions" method="POST" id="instructform">
+        <h3>Add a Cooking Instruction</h3>
+        <div>
+            <label for="visualsrc">Img:</label>
+            <input name="instruction[visualsrc]" id="visualsrc">
+            <label for="body">Instruction:</label>
+            <textarea name="instruction[instruct]" id="body" placeholder="Add a cookíng step instruction..."></textarea>
+        </div>
+        <button id="actionbtns">Submit Instruction</button>
+    </form>
+
+    <form action="/dishes/<%= dish._id %>/nutritionals" method="POST" id="nutriform">
+        <h3>Add a Nutrition-Stat</h3>
+        <div id="revrate">
+            <label for="nutri_prop">Nutrient_Prop:</label>
+            <input type="text" name="nutrition[nutri_prop]" id="nutri_prop" placeholder="Enter the nutrient property">
+        </div>
+        <div id="revbody">
+            <label for="nutri_value">Nutrient_Qty:</label>
+            <input type="number" min="0" max="2000" name="nutrition[nutri_value]" id="nutri_value"
+                placeholder="Enter the nutrient amount"></input>
+            <label for="unit"></label>
+            <select name="nutrition[unit]" id="unit">
+                <% for(let unit of units){ %>
+                    <option value="<%=unit%>">
+                        <%=unit%>
+                    </option>
+                    <% } %>
+            </select>
+        </div>
+        <button id="actionbtns">Submit Review</button>
+    </form>
+
+
+    <form action="/dishes/<%= dish._id %>/reviews" method="POST" id="revform">
+        <h3>Leave a Review</h3>
+        <div id="revrate">
+            <label for="rating">Rating:</label>
+            <input type="range" min="1" max="5" step="1" name="review[rating]" id="rating">
+        </div>
+        <div id="revbody">
+            <label for="body">Review:</label>
+            <textarea name="review[body]" id="body"
+                style="width: 300px; height: 100px; border: 2px groove hsl(0, 0%, 80%);"
+                placeholder="Tell us how you feel and what you think about this dish..."></textarea>
+        </div>
+        <button id="actionbtns">Submit Review</button>
+    </form>
+
+    <footer>
+        <section id="actionbtns"><button><a href="/dishes">All Dishes</a></button></section>
+    </footer>
+    <script src="../../resources/scripts/servshow.js"></script>
+</body>
+
+</html>

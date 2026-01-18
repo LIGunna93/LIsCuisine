@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dish</title>
+    <link rel="stylesheet" href="/resources/styles/newstyle.css">
+</head>
+
+<body>
+    <h2>Add a Dish</h2>
+    <% if(success && success.length) { %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <%= success %>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+        <% } %>
+
+            <% if(error && error.length) { %>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <%= error %>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+                <% } %>
+                    <div>
+                        <form action="/dishes" method="POST">
+                            <label for="name">Dish Name</label>
+                            <input type="text" name="dish[name]" id="name" placeholder="Enter a dish name..">
+                            <label for="price">Price (per Serving)</label>
+                            <input type="number" id="price" name="dish[price]" placeholder="Enter a price..">
+                            <label for="desc">Description</label>
+                            <input type="text" id="desc" name="dish[description]" placeholder="Describe the dish..">
+                            <label for="prepTime">Prep Time (minutes)</label>
+                            <input type="number" id="prepTime" name="dish[prepTime]" placeholder="Enter prep time..">
+                            <label for="prepTime">Difficulty</label>
+                            <input type="number" id="difficulty" name="dish[difficulty]" placeholder="Enter a difficulty level 1(weak) to 5(strong)..">
+                            <label for="array">Ingredients List</label>
+                            <input type="array" id="ingredients" name="dish[ingredients]" placeholder="List the ingredients..">
+                            <label for="imgsrc" >Image URL</label>
+                            <input type="text" id="imgsrc" name="dish[imgsrc]" placeholder="Enter image URL..">
+                            <label for="imgauth">Image Author</label>
+                            <input type="text" id="imgauth" name="dish[imgauth]" placeholder="Enter image author..">
+                            <label for="category">Select Category</label>
+                            <select name="dish[category]" id="category">
+                                <% for(let category of categories){ %>
+                                    <option value="<%=category%>">
+                                        <%=category%>
+                                    </option>
+                                    <% } %>
+                            </select>
+                            <button>Submit</button>
+                        </form>
+                        <a href="/dishes">Back To Main Dishes</a>
+                    </div>
+
+</body>
+
+</html>

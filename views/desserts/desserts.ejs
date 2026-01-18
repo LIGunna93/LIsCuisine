@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts &#x1F36C</title>
+</head>
+<body style="display: flex;  flex-direction: column; align-content: center;">
+    <h1 style="font-family:Georgia, 'Times New Roman', Times, serif; align-self: center;">Desserts</h1>
+	<div>
+		<ul style="border: 5px groove goldenrod;">
+			<% menu.Desserts.forEach(dess => { %> 
+			<figure style=" border-radius: 5px; background: azure;">
+                <li><h3><%= dess.name %></h3> - €<%= dess.price %></li>
+				<div>
+					<img src="<%= dess.img %>" style="display: block; width: 350px; height: 300px;">
+					<figcaption style="font-size: 15px; font-style: italic; display: inline-flex; align-items: center; background-color: gray; width:100%; color: brown;">Photo by <a href="<%= dess.imgref %>"><%= dess.imgauth %></a></figcaption>
+				</div>
+					<figcaption><h4 style="font-family: 'Trebuchet MS';"><%= dess.description %></h4></figcaption>
+			</figure>
+            <% }) %>
+        </ul>
+	<div>
+		<a href="/desserts/new">Add new Dessert</a>
+	</div>
+    </div>
+<script src="../../resources/scripts/desserts.js"></script>
+</body>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+</html>

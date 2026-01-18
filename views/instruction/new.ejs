@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dish</title>
+</head>
+
+<body>
+    <h2>Add a Cooking-Instruction</h2>
+                    <form action="/<%= dish._id || side._id %>/instructions" method="POST" id="instructform">
+                        <h3>Add a Cooking-Instruction</h3>
+                        <div id="">
+                            <label for="visualsrc">Img:</label>
+                            <input name="instruction[visualsrc]" id="visualsrc">
+                        </div>
+                        <div id="">
+                            <label for="body">Instruction:</label>
+                            <textarea name="instruction[instruct]" id="body"
+                                style="width: 300px; height: 100px; border: 2px groove hsl(0, 0%, 80%);"
+                                placeholder="Tell us how you feel and what you think about this dish..."></textarea>
+                        </div>
+                        <button>Submit Instruction</button>
+                    </form>    <a href="/sides">Back To Sides</a>
+
+
+</body>
+
+</html>

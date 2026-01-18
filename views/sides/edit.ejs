@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Dish</title>
+</head>
+
+<body>
+    <h1>
+        <%=side.name%>
+    </h1>
+    <h2>Edit Side Dish</h2>
+    <form action="/sides/<%=side._id%>/edit?_method=PUT" method="POST">
+        <label for="name">Side Name</label>
+        <input type="text" name="side[name]" id="name" placeholder="Enter a side name..">
+        <label for="price">Price (per Serving)</label>
+        <input type="number" id="price" name="side[price]" placeholder="Enter a price..">
+        <label for="desc">Description</label>
+        <input type="text" id="desc" name="side[description]" placeholder="Describe the side dish..">
+        <label for="prepTime">Prep Time (minutes)</label>
+        <input type="number" id="prepTime" name="side[prepTime]" placeholder="Enter prep time..">
+        <label for="category">Select Category</label>
+        <select name="side[category]" id="category">
+            <% for(let category of categories){ %>
+                <option value="<%=category%>">
+                    <%=category%>
+                </option>
+                <% } %>
+        </select>
+        <label for="imgsrc">Image URL</label>
+        <input type="text" id="imgsrc" name="side[imgsrc]" placeholder="Enter image URL..">
+        <button>Submit</button>
+    </form>
+    <a href="/sides">Back To Sides</a>
+    
+
+</body>
+
+</html>
