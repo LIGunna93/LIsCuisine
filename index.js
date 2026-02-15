@@ -32,11 +32,16 @@ const encoded_pwd = encodeURIComponent(pass);
 
 
 //DevPort
-const dbURIo = `mongodb://127.0.0.1:28001/LIsCuisine`; //NOAUTH
+const dbURIo1 = `mongodb://127.0.0.1:27017/LIsCuisine`; //NOAUTH
+//const dbURIo = `mongodb://127.0.0.1:28001/LIsCuisine`; //NOAUTH
 //const dbURIa = `mongodb://${user}:${pass}@127.0.0.1:28001/LIsCuisine`; //AUTH
 //Default Port
 //const dbURIdef = `mongodb://${user}:${encoded_pwd}@127.0.0.1:27017/LIsCuisine?authSource=admin`;
-mongoose.connect(dbURIo)
+
+// Atlas Connection String
+//const dbURI_cloud = `mongodb+srv://${user}:${encoded_pwd}@${process.env.Atlas_CLUSTER}.mongodb.net/LIsCuisine?retryWrites=true&w=majority`;
+
+mongoose.connect(dbURIo1)
   .then(() => {
     console.log("MONGO CONNECTION OPEN!!!")
   })
